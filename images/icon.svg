@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <rect width="128" height="128" rx="24" fill="#0D9488"/>
+  <text x="64" y="58" font-family="SF Pro Display, -apple-system, system-ui, sans-serif" font-size="32" font-weight="700" fill="white" text-anchor="middle">SSE</text>
+  <g stroke="white" stroke-width="3" fill="none" stroke-linecap="round">
+    <line x1="32" y1="82" x2="96" y2="82"/>
+    <line x1="40" y1="92" x2="88" y2="92"/>
+    <line x1="48" y1="102" x2="80" y2="102"/>
+  </g>
+</svg>

@@ -1,0 +1,105 @@
+{
+    "name": "ssetool",
+    "displayName": "SSE Merge Tool",
+    "description": "Parse and merge SSE (Server-Sent Events) messages using JSONPath expressions",
+    "version": "0.0.1",
+    "publisher": "ssetool",
+    "license": "MIT",
+    "icon": "images/icon.png",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/your-username/ssetool"
+    },
+    "bugs": {
+        "url": "https://github.com/your-username/ssetool/issues"
+    },
+    "homepage": "https://github.com/your-username/ssetool#readme",
+    "engines": {
+        "vscode": "^1.85.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "keywords": [
+        "sse",
+        "server-sent-events",
+        "jsonpath",
+        "merge",
+        "parse"
+    ],
+    "activationEvents": [],
+    "main": "./out/extension.js",
+    "contributes": {
+        "commands": [
+            {
+                "command": "ssetool.mergeFromClipboard",
+                "title": "SSE Tool: Merge from Clipboard"
+            },
+            {
+                "command": "ssetool.mergeFromSelection",
+                "title": "SSE Tool: Merge from Selection"
+            },
+            {
+                "command": "ssetool.mergeFromEditor",
+                "title": "SSE Tool: Merge from Editor"
+            },
+            {
+                "command": "ssetool.quickMergeFromClipboard",
+                "title": "SSE Tool: Quick Merge from Clipboard"
+            },
+            {
+                "command": "ssetool.quickMergeFromSelection",
+                "title": "SSE Tool: Quick Merge from Selection"
+            }
+        ],
+        "keybindings": [
+            {
+                "command": "ssetool.quickMergeFromClipboard",
+                "key": "ctrl+shift+m",
+                "mac": "cmd+shift+m"
+            },
+            {
+                "command": "ssetool.quickMergeFromSelection",
+                "key": "ctrl+shift+alt+m",
+                "mac": "cmd+shift+alt+m",
+                "when": "editorTextFocus"
+            }
+        ],
+        "configuration": {
+            "title": "SSE Merge Tool",
+            "properties": {
+                "ssetool.defaultJsonPath": {
+                    "type": "string",
+                    "default": "$.response.candidates[0].content.parts[0].text",
+                    "description": "Default JSONPath expression for extracting values"
+                },
+                "ssetool.lastUsedPath": {
+                    "type": "string",
+                    "default": "",
+                    "description": "Last used JSONPath (auto-saved)"
+                },
+                "ssetool.recentPaths": {
+                    "type": "array",
+                    "default": [],
+                    "description": "Recently used JSONPath expressions"
+                }
+            }
+        }
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "pretest": "npm run compile",
+        "test": "node ./out/test/runTest.js"
+    },
+    "devDependencies": {
+        "@types/node": "^20.10.0",
+        "@types/vscode": "^1.85.0",
+        "sharp": "^0.34.5",
+        "typescript": "^5.3.0"
+    },
+    "dependencies": {
+        "jsonpath-plus": "^8.0.0"
+    }
+}
