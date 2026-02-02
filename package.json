@@ -3,7 +3,7 @@
     "displayName": "SSE Merge Tool",
     "description": "Parse and merge SSE (Server-Sent Events) messages using JSONPath expressions",
     "version": "0.0.1",
-    "publisher": "ssetool",
+    "publisher": "0rek1",
     "license": "MIT",
     "icon": "images/icon.png",
     "repository": {
