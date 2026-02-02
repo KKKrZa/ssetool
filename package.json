@@ -8,12 +8,12 @@
     "icon": "images/icon.png",
     "repository": {
         "type": "git",
-        "url": "https://github.com/your-username/ssetool"
+        "url": "https://github.com/KKKrZa/ssetool"
     },
     "bugs": {
-        "url": "https://github.com/your-username/ssetool/issues"
+        "url": "https://github.com/KKKrZa/ssetool/issues"
     },
-    "homepage": "https://github.com/your-username/ssetool#readme",
+    "homepage": "https://github.com/KKKrZa/ssetool#readme",
     "engines": {
         "vscode": "^1.85.0"
     },
